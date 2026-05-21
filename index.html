@@ -4,117 +4,148 @@
 <head>
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <title>Henry Morales</title>
+    <meta name='description'
+        content='Portafolio de Henry Morales - Técnico en informática y desarrollador FullStack en progreso. Especializado en desarrollo de software, inteligencia artificial e innovación tecnológica.'>
+    <meta name='keywords'
+        content='Henry Morales, desarrollador, FullStack, programador, software, Python, HTML, CSS, Git, GitHub'>
+    <title>Henry Morales - Portafolio Profesional</title>
     <link rel='stylesheet' href='./css/style.css'>
 </head>
 
 <body>
     <header>
-        <h1>Henry Moralaes</h1>
+        <h1>HENRY MORALES</h1>
         <nav>
-            <a href="/">Home</a>
-            <a href="/about">About</a>
-            <a href="/contact">Contact</a>
+            <ul>
+                <li><a href="#inicio">Home</a></li>
+                <li><a href="#sobre-mi">About</a></li>
+                <li><a href="#habilidades">Skills</a></li>
+                <li><a href="#proyectos">Projects</a></li>
+                <li><a href="#contacto">Contact</a></li>
+            </ul>
         </nav>
     </header>
-    <section>
-        <img src="./img/henry_presentacion.jpeg" alt="Presentacion_Henry_Morales" width="300">
-        <h2>Henry Abdiel Morales Galindo</h2>
-        <p>Tecnico en informatica, actualmente estudiando desarollo de software </p>
-        <p>"Programador FullStack en progreso..."</p>
-    </section>
-    <section>
-        <h1>¿Quien es Henry?</h1>
-        <p>Hola, soy Henry. Me gusta la tecnologia, aprender como es que funciona y como poder repararla. Actualmente
-            estoy estudiando sobre el desarollo de software. Actualmente me interesan las areas como son la
-            inteliggencia artificial e inovar tecnologicamente.</p>
-    </section>
-    <section>
-        <h1>Habilidades</h1>
-        <img src="./img/scrum.png" alt="SCRUM" width="100px">
-        <img src="./img/git-icon.svg" alt="GIT" width="100px">
-        <img src="./img/github-icon.svg" alt="GITHUB" width="100px">
-        <img src="./img/python.svg" alt="PYTHON" width="100px">
-        <img src="./img/vscode.svg" alt="VSCODE" width="100px">
-        <img src="./img/windsurf-light.svg" alt="WINDSURF" width="100px">
-        <img src="./img/android-icon.svg" alt="ANDROID_STUDIO" width="100px">
-        <img src="./img/linux.svg" alt="LINUX" width="100px">
-        <img src="./img/html-5.svg" alt="HTML" width="100px">
-        <img src="./img/css.svg" alt="CSS" width="100px">
-    </section>
-    <section>
-        <h1>Proyecto</h1>
-        <h2>Mis Proyectos</h2>
+    <main>
+        <section id="inicio" class="presentacion">
+            <img src="./img/henry_presentacion.jpeg" alt="Presentacion_Henry_Morales" width="300">
+            <h2>Henry Abdiel Morales Galindo</h2>
+            <p>Técnico en informática, actualmente estudiando desarrollo de software</p>
+            <p>"Programador FullStack en progreso..."</p>
+        </section>
+        <section id="sobre-mi">
+            <h2>¿Quién es Henry?</h2>
+            <p>Hola, soy Henry. Me gusta la tecnología, aprender como es que funciona y como poder repararla.
+                Actualmente
+                estoy estudiando sobre el desarrollo de software. Actualmente me interesan las áreas como son la
+                inteligencia artificial e innovar tecnológicamente.</p>
+        </section>
+        <section id="habilidades">
+            <h2>Habilidades</h2>
+            <ul class="lista-habilidades">
+                <li><img src="./img/scrum.png" alt="Logo de SCRUM framework" width="100px"></li>
+                <li><img src="./img/git-icon.svg" alt="Logo de Git control de versiones" width="100px"></li>
+                <li><img src="./img/github-icon.svg" alt="Logo de GitHub plataforma" width="100px"></li>
+                <li><img src="./img/python.svg" alt="Logo de Python lenguaje de programación" width="100px"></li>
+                <li><img src="./img/vscode.svg" alt="Logo de Visual Studio Code editor" width="100px"></li>
+                <li><img src="./img/windsurf-light.svg" alt="Logo de Windsurf IDE" width="100px"></li>
+                <li><img src="./img/android-icon.svg" alt="Logo de Android Studio" width="100px"></li>
+                <li><img src="./img/linux.svg" alt="Logo de Linux sistema operativo" width="100px"></li>
+                <li><img src="./img/html-5.svg" alt="Logo de HTML5" width="100px"></li>
+                <li><img src="./img/css.svg" alt="Logo de CSS3" width="100px"></li>
+            </ul>
+        </section>
+        <section id="proyectos">
+            <h2>Mis Proyectos</h2>
 
-        <div class="contenedor">
+            <div class="contenedor-proyectos">
 
-            <div class="card">
-                <h3>MANCOMATE</h3>
+                <article class="tarjeta">
+                    <h3>MANCOMATE</h3>
+                    <p>
+                        Proyecto en HTML grupal, una pagina web sobre matematicas basicas.
+                    </p>
+
+                    <div class="tecnologias">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+
+                    <a href="https://moraless0.github.io/math/index.html" class="btn">Ver Proyecto</a>
+                </article>
+
+                <article class="tarjeta">
+                    <h3>Drive Safe</h3>
+                    <p>
+                        DriveSafe es una aplicación en Python que permite gestionar
+                        clientes, instructores, vehículos y citas para una academia de conducción.
+                    </p>
+
+                    <div class="tecnologias">
+                        <span>Python</span>
+                    </div>
+
+                    <a href="https://github.com/Moraless0/Drive_Safe" class="btn">Ver Proyecto</a>
+                </article>
+
+                <article class="tarjeta">
+                    <h3>Gestor Contactos</h3>
+                    <p>
+                        Aplicación en consola para gestionar contactos usando JSON.
+                    </p>
+
+                    <div class="tecnologias">
+                        <span>Python</span>
+                    </div>
+
+                    <a href="https://github.com/Moraless0/Gestor_Contactos_Respaldo" class="btn">Ver Proyecto</a>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="trabajos-tecnicos">
+            <h2>Mis trabajos técnicos</h2>
+            <div class="contenedor-proyectos">
+                <article class="tarjeta">
+                    <h3>Trabajos Técnicos</h3>
+                    <p>
+                        He trabajado un poco de todo en varias áreas de la tecnología.
+                    </p>
+
+                    <div class="tecnologias">
+                        <span>Celulares</span>
+                        <span>Computadoras</span>
+                        <span>Redes</span>
+                        <span>Software</span>
+                    </div>
+
+                    <a href="trabajos-tecnicos.html" class="btn">Ver Trabajos</a>
+                </article>
+            </div>
+        </section>
+        <section id="contacto" class="contacto">
+            <h2>Contacto</h2>
+
+            <div class="tarjeta-contacto">
+                <p><strong>📧 Correo:</strong> moraless06@hotmail.com</p>
+
                 <p>
-                    Proyecto en HTML grupal, una pagina web sobre matematicas basicas.
+                    <strong>💻 GitHub:</strong>
+                    <a href="https://github.com/Moraless0" target="_blank">
+                        Moraless0
+                    </a>
                 </p>
 
-                <div class="tecnologias">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                </div>
-
-                <a href="https://moraless0.github.io/math/index.html" class="btn">Ver Proyecto</a>
-            </div>
-
-            <div class="card">
-                <h3>Drive Safe</h3>
                 <p>
-                    Aplicación para organizar tareas diarias
-                    con opciones para agregar y eliminar actividades.
+                    <strong>🔗 LinkedIn:</strong>
+                    <a href="https://www.linkedin.com/in/moraless0/" target="_blank">
+                        Henry Morales
+                    </a>
                 </p>
-
-                <div class="tecnologias">
-                    <span>Python</span>
-                </div>
-
-                <a href="https://github.com/Moraless0/Drive_Safe" class="btn">Ver Proyecto</a>
             </div>
-
-            <div class="card">
-                <h3>Gestor Contactos</h3>
-                <p>
-                    Diseño de una tienda virtual con catálogo
-                    de productos y carrito de compras.
-                </p>
-
-                <div class="tecnologias">
-                    <span>Python</span>
-                </div>
-
-                <a href="https://github.com/Moraless0/Gestor_Contactos_Respaldo" class="btn">Ver Proyecto</a>
-            </div>
-
-        </div>
-    </section>
-    <section class="contacto">
-        <h2>Contacto</h2>
-
-        <div class="contacto-card">
-            <p><strong>📧 Correo:</strong> henry@email.com</p>
-
-            <p>
-                <strong>💻 GitHub:</strong>
-                <a href="https://github.com/Moraless0" target="_blank">
-                    Moraless0
-                </a>
-            </p>
-
-            <p>
-                <strong>🔗 LinkedIn:</strong>
-                <a href="https://www.linkedin.com/in/moraless0/" target="_blank">
-                    Henry Morales
-                </a>
-            </p>
-        </div>
-    </section>
-
+        </section>
+    </main>
     <footer>
         <p>Henry Morales © 2026</p>
         <p>Todos los derechos reservados</p>

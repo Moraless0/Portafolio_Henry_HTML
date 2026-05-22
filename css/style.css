@@ -1,3 +1,6 @@
+/* ========================================
+   ESTILOS GENERALES Y CONFIGURACIÓN
+   ======================================== */
 * {
     margin: 0;
     padding: 0;
@@ -14,8 +17,6 @@ html {
     src: url('../fonts/Audiowide-Regular.ttf') format('truetype');
 }
 
-
-
 body {
     font-family: 'Audiowide', Arial, sans-serif;
     background: #0a0e27;
@@ -23,9 +24,12 @@ body {
     line-height: 1.6;
 }
 
+/* ========================================
+   HEADER Y NAVEGACIÓN
+   ======================================== */
 header {
     background: #1a1a2e;
-    padding: 20px 40px;
+    padding: 15px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -38,26 +42,56 @@ header {
 
 header h1 {
     color: #00d4ff;
-    font-size: 28px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Checkbox hack para menú hamburguesa */
+.menu-toggle {
+    display: none;
+}
+
+.menu-button {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
+}
+
+.menu-button span {
+    width: 25px;
+    height: 3px;
+    background: #00d4ff;
+    margin: 3px 0;
+    transition: all 0.3s;
+    border-radius: 2px;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 30px;
+    gap: 20px;
 }
 
 nav a {
     text-decoration: none;
     color: #eaeaea;
-    font-weight: bold;
+    font-size: 14px;
+    font-weight: 500;
     transition: color 0.3s;
+    padding: 5px 10px;
+    border-radius: 5px;
 }
 
 nav a:hover {
     color: #00d4ff;
+    background: rgba(0, 212, 255, 0.1);
 }
 
+/* ========================================
+   CONTENEDOR PRINCIPAL Y SECCIONES
+   ======================================== */
 main {
     max-width: 1200px;
     margin: 0 auto;
@@ -121,6 +155,9 @@ section h2 {
                  0 0 30px rgba(0, 212, 255, 0.2);
 }
 
+/* ========================================
+   SECCIÓN DE PRESENTACIÓN
+   ======================================== */
 .presentacion {
     text-align: center;
     padding: 60px 40px;
@@ -142,6 +179,9 @@ section h2 {
     color: #b0b0b0;
 }
 
+/* ========================================
+   SECCIÓN DE HABILIDADES
+   ======================================== */
 .lista-habilidades {
     list-style: none;
     display: flex;
@@ -164,6 +204,9 @@ section h2 {
     transform: scale(1.1);
 }
 
+/* ========================================
+   SECCIÓN DE PROYECTOS
+   ======================================== */
 .contenedor-proyectos {
     display: flex;
     flex-wrap: wrap;
@@ -251,6 +294,9 @@ section h2 {
     background: #eaeaea;
 }
 
+/* ========================================
+   SECCIÓN DE CONTACTO
+   ======================================== */
 .tarjeta-contacto {
     max-width: 500px;
     margin: 0 auto;
@@ -271,6 +317,9 @@ section h2 {
     text-decoration: underline;
 }
 
+/* ========================================
+   FOOTER
+   ======================================== */
 footer {
     background: #1a1a2e;
     text-align: center;
@@ -317,36 +366,9 @@ footer p {
     box-shadow: 0 5px 15px rgba(0, 212, 255, 0.4);
 }
 
-/* Easter Egg */
-.easter-egg {
-    cursor: pointer;
-    transition: color 0.3s;
-    position: relative;
-}
-
-.easter-egg:hover {
-    color: #00d4ff;
-}
-
-.hidden-message {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.5s ease;
-    margin-top: 15px;
-    font-size: 16px;
-    color: #00d4ff;
-    text-align: center;
-    height: 0;
-    overflow: hidden;
-}
-
-.easter-egg:hover ~ .hidden-message {
-    opacity: 1;
-    transform: translateY(0);
-    height: auto;
-    margin-top: 15px;
-}
-
+/* ========================================
+   BOTÓN SCROLL TO TOP
+   ======================================== */
 .scroll-top {
     position: fixed;
     bottom: 30px;
@@ -374,119 +396,9 @@ footer p {
     box-shadow: 0 6px 20px rgba(0, 212, 255, 0.6);
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        padding: 10px 15px;
-    }
-
-    header h1 {
-        font-size: 20px;
-        margin-bottom: 10px;
-    }
-
-    nav ul {
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 10px;
-        justify-content: center;
-    }
-
-    nav a {
-        font-size: 12px;
-    }
-
-    main {
-        padding: 20px 15px;
-    }
-
-    section {
-        padding: 25px 20px;
-    }
-
-    section h2 {
-        font-size: 28px;
-    }
-
-    .presentacion {
-        padding: 40px 20px;
-    }
-
-    .presentacion img {
-        width: 200px;
-    }
-
-    .presentacion h2 {
-        font-size: 28px;
-    }
-
-    .presentacion p {
-        font-size: 16px;
-    }
-
-    .contenedor-proyectos {
-        gap: 20px;
-    }
-
-    .tarjeta {
-        width: 100%;
-        padding: 25px 20px;
-    }
-
-    .tarjeta h3 {
-        font-size: 20px;
-    }
-
-    .lista-habilidades {
-        gap: 20px;
-    }
-
-    .lista-habilidades img {
-        width: 80px;
-    }
-}
-
-@media (max-width: 480px) {
-    header {
-        padding: 8px 10px;
-    }
-
-    header h1 {
-        font-size: 18px;
-        margin-bottom: 8px;
-    }
-
-    nav ul {
-        gap: 8px;
-    }
-
-    nav a {
-        font-size: 11px;
-        padding: 5px 8px;
-    }
-
-    section h2 {
-        font-size: 24px;
-    }
-
-    .presentacion h2 {
-        font-size: 24px;
-    }
-
-    .tarjeta h3 {
-        font-size: 18px;
-    }
-
-    .tarjeta p {
-        font-size: 14px;
-    }
-}
-
-/* Estilos para página de trabajos técnicos */
+/* ========================================
+   ESTILOS PARA PÁGINA DE TRABAJOS TÉCNICOS
+   ======================================== */
 .introduccion {
     text-align: center;
     background: #16213e;
@@ -569,7 +481,9 @@ html {
     font-size: 14px;
 }
 
-/* Timeline */
+/* ========================================
+   SECCIÓN TIMELINE
+   ======================================== */
 .timeline {
     position: relative;
     max-width: 800px;
@@ -655,7 +569,9 @@ html {
     font-size: 14px;
 }
 
-/* Estadísticas */
+/* ========================================
+   SECCIÓN ESTADÍSTICAS
+   ======================================== */
 .stats-container {
     display: flex;
     flex-wrap: wrap;
@@ -695,7 +611,9 @@ html {
     color: #eaeaea;
 }
 
-/* Servicios */
+/* ========================================
+   SECCIÓN SERVICIOS
+   ======================================== */
 .servicios-grid {
     display: flex;
     flex-wrap: wrap;
@@ -755,7 +673,9 @@ html {
     font-size: 16px;
 }
 
-/* Experiencia y Conocimientos */
+/* ========================================
+   SECCIÓN EXPERIENCIA Y CONOCIMIENTOS
+   ======================================== */
 .experiencia-container {
     display: flex;
     flex-direction: column;
@@ -776,7 +696,9 @@ html {
     margin-top: 20px;
 }
 
-/* Metas y Objetivos */
+/* ========================================
+   SECCIÓN METAS Y OBJETIVOS
+   ======================================== */
 .metas-container {
     display: flex;
     flex-wrap: wrap;
@@ -819,8 +741,131 @@ html {
     font-size: 16px;
 }
 
-/* Media queries para trabajos técnicos */
+/* ========================================
+   MEDIA QUERIES - DISEÑO RESPONSIVE
+   ======================================== */
+
+/* Tablet y móviles grandes */
 @media (max-width: 768px) {
+    header {
+        padding: 12px 20px;
+    }
+
+    header h1 {
+        font-size: 18px;
+    }
+
+    /* Mostrar botón de menú en móvil */
+    .menu-button {
+        display: flex;
+    }
+
+    /* Ocultar nav por defecto en móvil */
+    nav {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #1a1a2e;
+        padding: 20px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        z-index: 999;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        width: 100%;
+    }
+
+    nav a {
+        font-size: 16px;
+        padding: 12px 20px;
+        background: #16213e;
+        border-radius: 8px;
+        text-align: center;
+        width: 100%;
+        max-width: 250px;
+        transition: all 0.3s;
+    }
+
+    nav a:hover {
+        background: #00d4ff;
+        color: #0a0e27;
+        transform: scale(1.05);
+    }
+
+    /* Mostrar nav cuando el checkbox está marcado */
+    .menu-toggle:checked ~ nav {
+        transform: translateX(0);
+    }
+
+    /* Animar botón de menú cuando está activo */
+    .menu-toggle:checked ~ .menu-button span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-toggle:checked ~ .menu-button span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle:checked ~ .menu-button span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+
+    main {
+        padding: 20px 15px;
+    }
+
+    section {
+        padding: 25px 20px;
+    }
+
+    section h2 {
+        font-size: 28px;
+    }
+
+    .presentacion {
+        padding: 40px 20px;
+    }
+
+    .presentacion img {
+        width: 200px;
+    }
+
+    .presentacion h2 {
+        font-size: 28px;
+    }
+
+    .presentacion p {
+        font-size: 16px;
+    }
+
+    .contenedor-proyectos {
+        gap: 20px;
+    }
+
+    .tarjeta {
+        width: 100%;
+        padding: 25px 20px;
+    }
+
+    .tarjeta h3 {
+        font-size: 20px;
+    }
+
+    .lista-habilidades {
+        gap: 20px;
+    }
+
+    .lista-habilidades img {
+        width: 80px;
+    }
+
+    /* Trabajos técnicos */
     .introduccion {
         padding: 25px 20px;
     }
@@ -854,41 +899,8 @@ html {
     .descripcion p {
         font-size: 12px;
     }
-}
 
-@media (max-width: 480px) {
-    .introduccion h2 {
-        font-size: 24px;
-    }
-
-    .galeria {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-
-    .item-galeria {
-        max-width: 100%;
-        aspect-ratio: auto;
-    }
-
-    .item-galeria img {
-        width: 100%;
-        height: auto;
-        max-height: 250px;
-        object-fit: cover;
-    }
-
-    .descripcion {
-        padding: 15px;
-    }
-
-    .descripcion h3 {
-        font-size: 16px;
-    }
-}
-
-/* Media queries para nuevas secciones */
-@media (max-width: 768px) {
+    /* Timeline responsive */
     .timeline::before {
         left: 20px;
     }
@@ -922,11 +934,6 @@ html {
         left: 10px;
     }
 
-    .stats-container {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-    }
-
     .stat-number {
         font-size: 36px;
     }
@@ -935,22 +942,12 @@ html {
         font-size: 16px;
     }
 
-    .servicios-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
     .servicio-card {
         padding: 30px 20px;
     }
 
     .servicio-icon {
         font-size: 48px;
-    }
-
-    .metas-container {
-        grid-template-columns: 1fr;
-        gap: 20px;
     }
 
     .meta-item {
@@ -962,9 +959,75 @@ html {
     }
 }
 
+/* Móviles pequeños */
 @media (max-width: 480px) {
-    .stats-container {
+    header {
+        padding: 10px 15px;
+    }
+
+    header h1 {
+        font-size: 16px;
+    }
+
+    .menu-button span {
+        width: 20px;
+        height: 2px;
+    }
+
+    nav {
+        top: 50px;
+        padding: 15px;
+    }
+
+    nav a {
+        font-size: 14px;
+        padding: 10px 15px;
+        max-width: 200px;
+    }
+
+    section h2 {
+        font-size: 24px;
+    }
+
+    .presentacion h2 {
+        font-size: 24px;
+    }
+
+    .tarjeta h3 {
+        font-size: 18px;
+    }
+
+    .tarjeta p {
+        font-size: 14px;
+    }
+
+    .introduccion h2 {
+        font-size: 24px;
+    }
+
+    .galeria {
         grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .item-galeria {
+        max-width: 100%;
+        aspect-ratio: auto;
+    }
+
+    .item-galeria img {
+        width: 100%;
+        height: auto;
+        max-height: 250px;
+        object-fit: cover;
+    }
+
+    .descripcion {
+        padding: 15px;
+    }
+
+    .descripcion h3 {
+        font-size: 16px;
     }
 
     .timeline-content {
